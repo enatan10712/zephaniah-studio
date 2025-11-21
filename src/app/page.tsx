@@ -70,9 +70,9 @@ export default function Home() {
           priority
         />
         
-        <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
+        <div className="relative z-20 text-center text-white px-4 sm:px-6 max-w-4xl mx-auto">
           {/* Logo in Hero */}
-          <div className="relative w-32 h-32 mx-auto mb-8 animate-float sparkle">
+          <div className="relative w-20 h-20 sm:w-24 md:w-32 mx-auto mb-4 sm:mb-6 md:mb-8 animate-float sparkle">
             <div className="absolute inset-0 bg-amber-600/20 rounded-full blur-xl animate-glow"></div>
             <Image
               src="/images/logo.png"
@@ -82,26 +82,26 @@ export default function Home() {
             />
           </div>
           
-          <h1 className="font-serif text-6xl md:text-8xl mb-8 text-shadow animate-luxuryReveal text-gold-shimmer">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-8xl mb-4 sm:mb-6 md:mb-8 text-shadow animate-luxuryReveal text-gold-shimmer leading-tight">
             Zephaniah Studio
           </h1>
-          <p className="text-2xl md:text-3xl mb-6 text-amber-300 font-medium max-w-2xl mx-auto animate-fadeInLeft animate-stagger-1">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 sm:mb-6 text-amber-300 font-medium max-w-2xl mx-auto animate-fadeInLeft animate-stagger-1">
             Luxurious crafts, Artistry and woodwork
           </p>
-          <p className="text-xl md:text-2xl mb-10 text-charcoal-100 max-w-3xl mx-auto animate-fadeInRight animate-stagger-2">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 text-charcoal-100 max-w-3xl mx-auto animate-fadeInRight animate-stagger-2 leading-relaxed">
             Discover exquisite luxury furniture that transforms your space into a masterpiece of comfort and style
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-bounceIn animate-stagger-3">
-            <Button size="xl" variant="luxury" className="btn-luxury hover-glow sparkle">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center animate-bounceIn animate-stagger-3">
+            <Button size="lg" variant="luxury" className="btn-luxury hover-glow sparkle text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4">
               <Link href="/shop" className="flex items-center">
                 Explore Collection
-                <ArrowRight className="ml-3 w-6 h-6" />
+                <ArrowRight className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
               </Link>
             </Button>
-            <Button size="xl" variant="outline" className="border-white text-white hover:bg-white hover:text-charcoal-900 hover-lift hover-glow border-luxury">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-charcoal-900 hover-lift hover-glow border-luxury text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4">
               <Link href="/showroom" className="flex items-center">
                 Book Showroom Visit
-                <Calendar className="ml-3 w-6 h-6" />
+                <Calendar className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
               </Link>
             </Button>
           </div>
@@ -109,19 +109,19 @@ export default function Home() {
       </section>
 
       {/* Featured Collections */}
-      <section className="py-24 bg-gradient-to-b from-amber-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="font-serif text-5xl md:text-6xl text-amber-900 mb-6 animate-luxuryReveal text-luxury-gradient">
+      <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-amber-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-amber-900 mb-4 sm:mb-6 animate-luxuryReveal text-luxury-gradient leading-tight">
               Featured Collections
             </h2>
-            <p className="text-xl text-amber-700 max-w-3xl mx-auto animate-fadeInLeft animate-stagger-1">
+            <p className="text-base sm:text-lg md:text-xl text-amber-700 max-w-3xl mx-auto animate-fadeInLeft animate-stagger-1 leading-relaxed">
               Curated pieces that embody the perfect blend of comfort, style, and Ethiopian craftsmanship
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-amber-600 to-amber-700 mx-auto mt-6 animate-shimmer"></div>
+            <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-amber-600 to-amber-700 mx-auto mt-4 sm:mt-6 animate-shimmer"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
             {featuredProducts.map((product, index) => (
               <div key={product.id} className={`animate-luxuryReveal animate-stagger-${index + 1}`}>
                 <ProductCard product={product} />
@@ -129,11 +129,11 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-16 animate-fadeInUp animate-stagger-4">
-            <Button size="lg" variant="outline" className="hover-lift hover-glow border-luxury btn-enhanced">
-              <Link href="/shop" className="flex items-center text-lg">
+          <div className="text-center mt-10 sm:mt-12 md:mt-16 animate-fadeInUp animate-stagger-4">
+            <Button size="lg" variant="outline" className="hover-lift hover-glow border-luxury btn-enhanced text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
+              <Link href="/shop" className="flex items-center">
                 View All Products
-                <ArrowRight className="ml-3 w-5 h-5" />
+                <ArrowRight className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5" />
               </Link>
             </Button>
           </div>
